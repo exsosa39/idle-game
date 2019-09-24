@@ -1,14 +1,12 @@
 var score = 1; // Create a variable to store the score in
 
 var title = new Title('Welcome to the Game'); // Create a title element
-var button = new Button('hello', btnPress);   // Create a button element
-var hidden = new Button('Boo!');
+var button = new Button('click here for wood', btnPress);   // Create a button element
+var hidden = new Button('wood');
 hidden.hide();
-var scr = new Text(score);                    // Create a text element
+var scr = new Text(score);                     // Create a title element
 
-setInterval(btnPress, 1000);   // Set up a loop
-setInterval(makebtn, 1000); // Run the "createButton" function once every 1000 milliseconds (once every second)
-
+ setInterval(btnPress, 100000);  // Set up a loop
 
 function btnPress() {
   score++;         // Increase the score
@@ -20,25 +18,15 @@ function btnPress() {
     hidden.hide(500);
   }
 }
-
 function makebtn() {
-  var button = new Button('iPhone 11')
+  var button = new Button('wood')
 }
-var score = 0; // Create a variable to store the score in
-setInterval(createButton, 1000); // Run the "createButton" function once every 1000 milliseconds (once every second)
+var text1 = new Text('stranger found you village');  // Create some text to go in the columns
+var text2 = new Text('do you trust him yes or no');
 
-function createButton() {
-  let button = new Button('Iphone11');
-}
-var score = 0; // Create a variable to store the score in
+var rowSection = new Section('row'); // Create the row to store the columns in
+var column1 = new Section('col');    // Create the first column
+var column2 = new Section('col');    // Create the second column
 
-var title = new Title('Welcome to the Game'); // Create a title element
-var button = new Button('hello', btnPress);         // Create a button element
-var scr = new Text(score);                     // Create a text element
-
-setInterval(btnPress, 1000);   // Set up a loop
-
-function btnPress() {
-  score++;         // Increase the score
-  scr.edit(score); // Update the page with the new score
-}
+column1.add(text1);
+column2.add(text2);
