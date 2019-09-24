@@ -21,8 +21,15 @@ function btnPress() {
 function makebtn() {
   var button = new Button('wood')
 }
-var text1 = new Text('stranger found you village');  // Create some text to go in the columns
-var text2 = new Text('do you trust him yes or no');
+var score = 0; // Create a variable to store the score in
+setInterval(createButton, 1000); // Run the "createButton" function once every 1000 milliseconds (once every second)
+
+function createButton() {
+  let button = new Button('wood');
+}
+var score = 0; // Create a variable to store the score in
+var button = new Button('click here for wood', btnPress);         // Create a button element
+var scr = new Text(score);                     // Create a text element
 
 var rowSection = new Section('row'); // Create the row to store the columns in
 var column1 = new Section('col');    // Create the first column
